@@ -1,3 +1,6 @@
+0.8.0: 2017-01-11 Krzysztof Kwiatkowski <kwiatkk1@gmail.com>
+  * Socket handles not shared across workers in cluster mode
+
 0.7.0: 2014-08-05 Greg Slepak <contact@taoeffect.com>
   * `native-dns-packet` 0.0.4 -> 0.1.1
   * `native-dns-cache`  0.0.1 -> 0.0.2
