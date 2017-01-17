@@ -32,7 +32,7 @@ exports.setUp = function (cb) {
 };
 
 exports.timeout = function (test) {
-  var r = Request({
+  var r = new Request({
     question: q,
     server: noServer,
     timeout: 100,
@@ -54,7 +54,7 @@ exports.timeout = function (test) {
 };
 
 exports.udpResponse = function (test) {
-  var r = Request({
+  var r = new Request({
     question: q,
     server: udpServ,
     timeout: 4000,
@@ -78,7 +78,7 @@ exports.udpResponse = function (test) {
 };
 
 exports.tcpResponse = function (test) {
-  var r = Request({
+  var r = new Request({
     question: q,
     server: tcpServ,
     timeout: 4000,
@@ -102,7 +102,7 @@ exports.tcpResponse = function (test) {
 };
 
 exports.serverString = function (test) {
-  var r = Request({
+  var r = new Request({
     question: q,
     server: '8.8.8.8',
   });
@@ -123,7 +123,7 @@ exports.serverString = function (test) {
 };
 
 exports.questionString = function (test) {
-  var r = Request({
+  var r = new Request({
     question: Question({
       name: 'www.google.com',
       type: 'a',
@@ -150,7 +150,7 @@ exports.emptyUdp = function (test) {
   var socket = dgram.createSocket('udp4');
   socket.on('listening', function () {
     var timeout = false;
-    var r = Request({
+    var r = new Request({
       question: q,
       server: { address: '127.0.0.1', port: socket.address().port, type: 'udp' },
       timeout: 300,
@@ -177,7 +177,7 @@ exports.emptyUdp = function (test) {
 
 exports.longName = function (test) {
   var didErr = false;
-  var r = Request({
+  var r = new Request({
     question: Question({
       name: '*************'
         + '***************'

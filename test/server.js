@@ -114,7 +114,7 @@ exports.udpResponse = function (test) {
   });
 
   server.on('listening', function () {
-    var r = dns.Request({
+    var r = new dns.Request({
       question: dns.Question({
         name: 'www.google.com',
       }),
