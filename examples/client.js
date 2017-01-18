@@ -42,9 +42,9 @@ request = dns.resolveNs('linode.com', function (err, results) {
   });
 });
 
-request = dns.resolveCname('www.nodejs.org', function (err, results) {
+request = dns.resolveCname('www.allegrogroup.com', function (err, results) {
   results.forEach(function (result) {
-    console.log('www.google.com -->', result);
+    console.log('www.allegrogroup.com -->', result);
   });
 });
 

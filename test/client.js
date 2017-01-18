@@ -225,10 +225,8 @@ exports.resolveSrv = function (test) {
   checkWrap(test, req);
 };
 
-
-/*
 exports.resolveCname = function (test) {
-  var req = dns.resolveCname('www.google.com', function(err, names) {
+  var req = dns.resolveCname('www.allegrogroup.com', function(err, names) {
     test.ifError(err);
 
     test.ok(names.length > 0);
@@ -244,7 +242,6 @@ exports.resolveCname = function (test) {
 
   checkWrap(test, req);
 };
-*/
 
 exports.resolveTxt = function (test) {
   var req = dns.resolveTxt('google.com', function(err, records) {
