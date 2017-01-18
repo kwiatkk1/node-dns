@@ -67,7 +67,6 @@ exports.setUp = function (cb) {
 };
 
 exports.resolve4 = function (test) {
-  console.log('asdf 1')
   var req = dns.resolve4('www.google.com', function(err, ips) {
     test.ifError(err);
 
@@ -79,9 +78,7 @@ exports.resolve4 = function (test) {
 
     test.done();
   });
-  console.log('asdf 2')
   checkWrap(test, req);
-  console.log('asdf 3')
 };
 
 
