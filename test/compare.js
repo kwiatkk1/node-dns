@@ -91,18 +91,18 @@ var lookup = function(domain, type, test) {
 };
 
 exports.resolve4 = resolve.bind(null, 'irc6.geo.oftc.net', 'A');
-exports.resolve6 = resolve.bind(null, 'irc6.geo.oftc.net', 'AAAA');
+exports.resolve6 = resolve.bind(null, 'example.com', 'AAAA');
 exports.resolveMx = resolve.bind(null, 'gmail.com', 'MX');
 exports.resolveNs = resolve.bind(null, 'google.com', 'NS');
 exports.resolveSrv = resolve.bind(null, '_jabber._tcp.google.com', 'SRV');
-exports.resolveCname = resolve.bind(null, 'www.google.com', 'CNAME');
+exports.resolveCname = resolve.bind(null, 'www.allegrogroup.com', 'CNAME');
 //exports.resolveDne = resolve.bind(null, 'does.not.exist', 'A');
 // TODO this probably shouldn't even transit?
 //resolve('should be a formerr', 'A');
 
-exports.lookup4 = lookup.bind(null, 'www.atxconsulting.com', 4);
-exports.lookup6 = lookup.bind(null, 'www.atxconsulting.com', 6);
-exports.lookupImplicit = lookup.bind(null, 'www.atxconsulting.com');
+exports.lookup4 = lookup.bind(null, 'example.com', 4);
+exports.lookup6 = lookup.bind(null, 'example.com', 6);
+exports.lookupImplicit = lookup.bind(null, 'example.com');
 exports.lookupDne = lookup.bind(null, 'does.not.exist', 4);
 exports.lookupNull = lookup.bind(null, null);
 exports.lookupLocalIP = lookup.bind(null, '127.0.0.1');
